@@ -238,3 +238,489 @@
             .article-title {
                 font-size: 34px;
                 line-height: 1.3;
+            }
+        }
+
+        .article-deck {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #555555;
+            text-align: center;
+            max-width: 620px;
+            margin: 0 auto 16px auto;
+            font-weight: 400;
+        }
+
+        @media (min-width: 640px) {
+            .article-deck {
+                font-size: 16px;
+            }
+        }
+
+        /* Metadata Penulis & Tanggal */
+        .article-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-subtle);
+            margin-bottom: 24px;
+        }
+
+        .author-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #2b2b2b;
+            font-weight: 600;
+        }
+
+        .author-box svg {
+            width: 13px !important;
+            height: 13px !important;
+            fill: #4b4b4b;
+        }
+
+        .meta-dot {
+            color: #b0b0b0;
+        }
+
+        /* fitur figur foto */
+        .featured-figure {
+            margin: 0 0 28px 0;
+            text-align: center;
+        }
+
+        .image-card {
+            background-color: #f7f7f7;
+            border: 1px solid #dedede;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+
+        .featured-img {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: contain;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 12px;
+            color: #707070;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            line-height: 1.4;
+        }
+
+        .image-caption svg {
+            width: 14px !important;
+            height: 14px !important;
+            fill: #777;
+        }
+
+        /* Isi Artikel */
+        .article-body {
+            font-family: var(--font-editorial);
+            font-size: 16px;
+            line-height: 1.85;
+            color: #2b2b2b;
+            text-align: left;
+        }
+
+        @media (min-width: 640px) {
+            .article-body {
+                font-size: 17.5px;
+                line-height: 1.9;
+            }
+        }
+
+        .article-body p {
+            margin-bottom: 22px;
+            word-break: break-word;
+        }
+
+        .article-body p strong.first-word {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Blockquote */
+        .quote-box {
+            border-left: 3px solid var(--brand-red);
+            background-color: #fcf8f8;
+            padding: 16px 20px;
+            margin: 28px 0;
+            border-radius: 0 6px 6px 0;
+            font-style: italic;
+            color: #383838;
+        }
+
+        .quote-box p {
+            margin-bottom: 6px !important;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            color: #777;
+            font-style: normal;
+            font-weight: 500;
+            display: block;
+        }
+
+        /* Floating / Bottom aksi Bar */
+        .action-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 0;
+            margin: 20px 0 32px 0;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .action-btn {
+            background-color: #f5f5f5;
+            border: 1px solid #dfdfdf;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #444444;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .action-btn svg {
+            width: 15px !important;
+            height: 15px !important;
+        }
+
+        .action-btn:hover {
+            background-color: #eaeaea;
+            color: #111;
+        }
+
+        .action-btn.active {
+            background-color: #fee2e2;
+            border-color: #fca5a5;
+            color: var(--brand-red);
+        }
+
+        /* Author Card Footer */
+        .author-card {
+            background: #f9f9f9;
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 540px) {
+            .author-card {
+                flex-direction: row;
+                text-align: left;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
+
+        .author-card-avatar {
+            width: 60px;
+            height: 60px;
+            max-width: 60px;
+            max-height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .author-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 2px;
+        }
+
+        .author-card .author-role {
+            font-size: 12px;
+            color: var(--brand-red);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .author-card p {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Toast Notifikasi */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(18, 18, 18, 0.92);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 500;
+            z-index: 999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- proses membaca -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- Navigasi Sticky -->
+    <header class="site-header">
+        <div class="header-top">
+            <a href="#" class="logo" aria-label="Histori Indonesia Beranda">
+                histori<span>Indonesia</span>
+            </a>
+
+            <div class="header-right">
+                <!-- Search Button -->
+                <button class="icon-btn" aria-label="Pencarian" onclick="showToast('Fitur pencarian dibuka')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <!-- Avatar Profil -->
+                <a href="Profile" aria-label="Profil Akun">
+                    <img 
+                        src="https://u.pone.rs/tojxobgd.jpg?auto=format&fit=crop&w=80&h=80&q=80" 
+                        alt="Avatar Pengguna" 
+                        class="avatar-img"
+                        onerror="this.src='https://placehold.co/80x80/222222/ffffff?text=U'"
+                    >
+                </a>
+            </div>
+        </div>
+
+        <!-- Kategori Menu Horizontal -->
+        <div class="category-nav-wrapper">
+            <nav class="category-nav">
+                <a href="Index">Biodata</a>
+                <a href="#" class="active">Sejarah</a>
+                <a href="#">Militer</a>
+                <a href="#">Ekonomi</a>
+                <a href="#">Olahraga</a>
+                <a href="#">Sains</a>
+                <a href="#">Urban</a>
+                <button class="nav-dropdown-btn" onclick="showToast('Menu lainnya')">
+                    <span>Lainnya</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Badge Kategori -->
+        <div class="category-pill-container">
+            <span class="category-pill">Sejarah Nusantara</span>
+        </div>
+
+        <!-- Judul Artikel -->
+        <h1 class="article-title">Menelusuri Sejarah Yogyakarta: Dari Perjanjian Giyanti hingga Poros Perjuangan Republik</h1>
+
+        <!-- Subjudul Ringkasan -->
+        <p class="article-deck">
+            Lahir dari perpecahan Mataram Islam pada 1755, Yogyakarta menjelma menjadi pusat kebudayaan Jawa adiluhung sekaligus benteng pertahanan kemerdekaan Indonesia.
+        </p>
+
+        <!-- Penulis dan Tanggal -->
+        <div class="article-meta">
+            <div class="author-box">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <span>© Satria Mahadmadani Rafan</span>
+            </div>
+            <span class="meta-dot">•</span>
+            <time datetime="2023-08-17">17 Agu 2023</time>
+        </div>
+
+        <!-- Ilustrasi Yogyakarta -->
+        <figure class="featured-figure">
+            <div class="image-card">
+                <img 
+                    src="https://cdn.filn.pp.ua/uploads/betabotzapi/e35d6.jpg" 
+                    alt="Pemandangan Bersejarah Kota Yogyakarta" 
+                    class="featured-img"
+                    onerror="this.onerror=null; this.src='https://placehold.co/900x520/e2e2e2/333333?text=Sejarah+Yogyakarta';"
+                >
+            </div>
+            <figcaption class="image-caption">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3.2"/>
+                    <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+                </svg>
+                <span>Sudut ikonik Yogyakarta yang sarat nilai filosofi dan jejak masa lampau.</span>
+            </figcaption>
+        </figure>
+      
+        <div class="action-bar">
+            <button class="action-btn" id="shareBtn" onclick="shareArticle()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                <span>Bagikan</span>
+            </button>
+            <button class="action-btn" id="bookmarkBtn" onclick="toggleSave(this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>Simpan</span>
+            </button>
+        </div>
+        <article class="article-body">
+            <p>
+                <strong class="first-word">SEJARAH</strong> berdirinya Yogyakarta berakar kuat pada dinamika politik Mataram Islam pertengahan abad ke-18. Perjanjian Giyanti yang ditandatangani pada 13 Februari 1755 secara resmi membagi wilayah Mataram menjadi Kasunanan Surakarta dan Kasultanan Ngayogyakarta Hadiningrat, yang dipimpin oleh Pangeran Mangkubumi bergelar Sri Sultan Hamengku Buwono I.
+            </p>
+
+            <p>
+                Pangeran Mangkubumi kemudian memilih kawasan hutan beringin di antara Sungai Winongo dan Sungai Code untuk membangun pusat kekuasaannya. Kompleks Keraton Yogyakarta ini tidak sekadar didesain sebagai istana bangsawan, melainkan dirancang berdasarkan garis imajiner kosmologis yang membentang lurus dari Gunung Merapi, Tugu Golong Gilig, Keraton, hingga Laut Selatan.
+            </p>
+
+            <p>
+                Konsep tata ruang sumbu filosofis tersebut memadukan keseimbangan antara manusia, alam semesta, dan Sang Pencipta (<em>Hamemayu Hayuning Bawana</em>). Sepanjang abad ke-19, wilayah ini berkembang menjadi episentrum kebudayaan Jawa yang mempertahankan tradisi sastra, tari, musik gamelan, dan etika keraton di tengah cengkeraman kolonialisme Belanda.
+            </p>
+
+            <div class="quote-box">
+                <p>“Yogyakarta bukan hanya sebuah kota dengan peninggalan arsitektur tradisional, melainkan simbol keteguhan watak dan spiritualitas Jawa yang mampu beradaptasi dengan perubahan zaman tanpa kehilangan kepribadian aslinya.”</p>
+                <span class="quote-author">— Selo Soemardjan, <em>Perubahan Sosial di Yogyakarta</em></span>
+            </div>
+
+            <p>
+                Memasuki era revolusi fisik tahun 1946–1949, Yogyakarta mengukir peran krusial dalam eksistensi Republik Indonesia. Ketika Jakarta berada di bawah tekanan militer Belanda pasca-proklamasi, Sri Sultan Hamengku Buwono IX dan Paku Alam VIII mengundang pemerintah pusat untuk memindahkan ibu kota negara ke Yogyakarta.
+            </p>
+
+            <p>
+                Di kota ini pula peristiwa bersejarah Serangan Umum 1 Maret 1949 meletus, membuktikan kepada mata dunia internasional bahwa Republik Indonesia dan angkatan perangnya masih berdiri kokoh berdaulat.
+            </p>
+
+            <p>
+                Atas dedikasi dan sumbangsih historis yang tak terhingga tersebut, pemerintah Republik Indonesia menetapkan status Daerah Istimewa bagi Yogyakarta, menjadikannya monumen sejarah hidup yang senantiasa menyeimbangkan warisan leluhur dan modernitas.
+            </p>
+        </article>
+
+       <!-- untuk bagian author nya -->
+        <div class="author-card">
+            <img 
+                src="https://raw.githubusercontent.com/satriahubdeals-eng/Project-Website-/refs/heads/main/img/IMG20260823195137.jpg?auto=format&fit=crop&w=140&h=140&q=80" 
+                alt="Amanda Rachmadita" 
+                class="author-card-avatar"
+                onerror="this.src='https://placehold.co/140x140/333333/ffffff?text=AR'"
+            >
+            <div>
+                <h4>Satria Mahadmadani Rafan</h4>
+                <div class="author-role">Reseach & technology</div>
+                <p>Meneliti dinamika kerajaan-kerajaan di Jawa, warisan tata ruang kota tradisional, serta sejarah perjuangan mempertahankan kemerdekaan Republik Indonesia.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast" class="toast">Tautan berhasil disalin ke clipboard!</div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (height > 0) ? (winScroll / height) * 100 : 0;
+            const bar = document.getElementById("progress-bar");
+            if (bar) {
+                bar.style.width = scrolled + "%";
+            }
+        });
+
+        // Toast pesan sistem
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            if (!toast) return;
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2400);
+        }
+
+        // tombol Share 
+        function shareArticle() {
+            const dummy = document.createElement('input');
+            dummy.value = window.location.href;
+            document.body.appendChild(dummy);
+            dummy.select();
+            try {
+                document.execCommand('copy');
+                showToast('Tautan artikel berhasil disalin!');
+            } catch (err) {
+                showToast('Salin URL manual dari peramban');
+            }
+            document.body.removeChild(dummy);
+        }
+
+        // Bookmark
+        function toggleSave(btn) {
+            btn.classList.toggle('active');
+            const isSaved = btn.classList.contains('active');
+            const svg = btn.querySelector('svg');
+            if (isSaved) {
+                svg.setAttribute('fill', 'currentColor');
+                btn.querySelector('span').textContent = 'Tersimpan';
+                showToast('Artikel disimpan ke daftar baca');
+            } else {
+                svg.setAttribute('fill', 'none');
+                btn.querySelector('span').textContent = 'Simpan';
+                showToast('Dihapus dari daftar simpan');
+            }
+        }
+    </script>
+</body>
+</html>
