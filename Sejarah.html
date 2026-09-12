@@ -1,5 +1,240 @@
 <!DOCTYPE html>
-<html lang ="id"</html>
+<html lang="id">
 <head>
-  
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Menelusuri Sejarah Yogyakarta: Dari Perjanjian Giyanti hingga Poros Perjuangan Republik - HistoriA</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Variabel Dasar */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --brand-red: #c91818;
+            --brand-dark: #121212;
+            --text-main: #242424;
+            --text-muted: #666666;
+            --text-subtle: #8a8a8a;
+            --bg-page: #ffffff;
+            --border-light: #e5e5e5;
+            --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-editorial: 'Merriweather', Georgia, 'Times New Roman', serif;
+        }
+
+        html {
+            font-family: var(--font-ui);
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            -webkit-text-size-adjust: 100%;
+            text-rendering: optimizeLegibility;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* tampilan proses membaca */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: transparent;
+            z-index: 100;
+        }
+        #progress-bar {
+            height: 3px;
+            background-color: var(--brand-red);
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        /* perbaikan / Sticky Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-light);
+            z-index: 90;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+        }
+
+        .header-top {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: var(--font-editorial);
+            font-size: 24px;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .logo span {
+            color: var(--brand-red);
+            font-weight: 900;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #333333;
+            transition: background-color 0.2s;
+        }
+
+        .icon-btn:hover {
+            background-color: #f1f1f1;
+        }
+
+        .icon-btn svg, .meta-icon svg, .caption-icon svg {
+            width: 18px !important;
+            height: 18px !important;
+            max-width: 18px !important;
+            max-height: 18px !important;
+            flex-shrink: 0;
+            display: block;
+        }
+
+        .avatar-img {
+            width: 30px;
+            height: 30px;
+            max-width: 30px;
+            max-height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            display: block;
+        }
+
+        /* Nav Kategori */
+        .category-nav-wrapper {
+            border-top: 1px solid #f0f0f0;
+            background: #fafafa;
+        }
+
+        .category-nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            height: 40px;
+        }
+
+        .category-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-nav a, .nav-dropdown-btn {
+            font-size: 13px;
+            font-weight: 500;
+            color: #555555;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 2px 0;
+        }
+
+        .category-nav a:hover, .category-nav a.active {
+            color: var(--brand-red);
+            font-weight: 600;
+        }
+
+        .nav-dropdown-btn svg {
+            width: 10px !important;
+            height: 10px !important;
+            max-width: 10px !important;
+            stroke-width: 2.5;
+        }
+
+        /* Konten Utama */
+        .main-container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 28px 18px 60px 18px;
+            width: 100%;
+        }
+
+        /* Categori */
+        .category-pill-container {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .category-pill {
+            display: inline-block;
+            padding: 4px 18px;
+            border-radius: 999px;
+            border: 1px solid #d4d4d4;
+            font-size: 12px;
+            font-weight: 500;
+            color: #4a4a4a;
+            background: #ffffff;
+            letter-spacing: 0.3px;
+        }
+
+        .article-title {
+            font-family: var(--font-editorial);
+            font-size: 26px;
+            line-height: 1.35;
+            font-weight: 700;
+            text-align: center;
+            color: #111111;
+            margin-bottom: 14px;
+            letter-spacing: -0.3px;
+        }
+
+        @media (min-width: 640px) {
+            .article-title {
+                font-size: 34px;
+                line-height: 1.3;
