@@ -1,0 +1,54 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Website: Python + Chrome",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "url": "http://127.0.0.1:8080",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "Serve website with Python",
+            "postDebugTask": "Stop website server"
+        },
+        {
+            "name": "Website: Node.js + Chrome",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "url": "http://127.0.0.1:8080",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "Serve website with Node.js",
+            "postDebugTask": "Stop website server"
+        },
+        {
+            "name": "Website: PHP + Chrome",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "url": "http://127.0.0.1:8080",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "Serve website with PHP",
+            "postDebugTask": "Stop website server"
+        },
+        {
+            "name": "Website: Open hosted URL",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "url": "${input:websiteUrl}",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Website: Attach to Chrome",
+            "type": "pwa-chrome",
+            "request": "attach",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "websiteUrl",
+            "type": "promptString",
+            "description": "Masukkan URL website VPS/hosting",
+            "default": "https://contohdomain.com"
+        }
+    ]
+}

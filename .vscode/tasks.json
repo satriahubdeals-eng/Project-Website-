@@ -1,0 +1,95 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Serve website with Python",
+            "type": "shell",
+            "command": "python3 -m http.server 8080 --bind 127.0.0.1",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": ".*",
+                    "file": 1,
+                    "location": 2,
+                    "message": 3
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Serving HTTP on",
+                    "endsPattern": "Serving HTTP on"
+                }
+            },
+            "presentation": {
+                "reveal": "never",
+                "close": true
+            }
+        },
+        {
+            "label": "Serve website with PHP",
+            "type": "shell",
+            "command": "php -S 127.0.0.1:8080 -t .",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": ".*",
+                    "file": 1,
+                    "location": 2,
+                    "message": 3
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Development Server|PHP [0-9]",
+                    "endsPattern": "Development Server|PHP [0-9]"
+                }
+            },
+            "presentation": {
+                "reveal": "never",
+                "close": true
+            }
+        },
+        {
+            "label": "Serve website with Node.js",
+            "type": "shell",
+            "command": "node server.js",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": ".*",
+                    "file": 1,
+                    "location": 2,
+                    "message": 3
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Website berjalan di",
+                    "endsPattern": "Website berjalan di"
+                }
+            },
+            "presentation": {
+                "reveal": "never",
+                "close": true
+            }
+        },
+        {
+            "label": "Stop website server",
+            "type": "shell",
+            "command": "pkill -f 'node server.js' || pkill -f 'python3 -m http.server 8080 --bind 127.0.0.1' || pkill -f 'php -S 127.0.0.1:8080' || true",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "never",
+                "close": true
+            }
+        }
+    ]
+}
