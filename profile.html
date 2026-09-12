@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Penulis - Satria Mahadmadani Rafan</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --brand-red: #c91818;
+            --text-main: #1f1f1f;
+            --text-muted: #666666;
+            --border: #e8e8e8;
+            --bg-card: #fcfcfc;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 18px 60px;
+        }
+
+        /* 1. BAGIAN HEADER PROFIL */
+        .profile-header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .profile-avatar-wrap {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            background: #0284c7;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            border: 2px solid #fff;
+        }
+
+        .author-name {
+            font-family: 'Merriweather', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 4px;
+        }
+
+        .author-tagline {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--brand-red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .author-bio {
+            font-size: 15px;
+            color: var(--text-muted);
+            max-width: 580px;
+            margin: 0 auto 20px;
+        }
+
+        /* Statistik Angka */
+        .author-stats {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Tombol Aksi */
+        .profile-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .btn-follow {
+            background-color: var(--brand-red);
+            color: #ffffff;
+            border: none;
+            padding: 8px 22px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-follow:hover {
+            background-color: #a51313;
+        }
+
+        .btn-contact {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid #ccc;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* 2. TAB NAVIGASI KARYA */
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+            margin: 28px 0 20px;
+        }
+
+        .tab-item {
+            padding: 10px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-decoration: none;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-item.active {
+            color: var(--brand-red);
+            border-bottom-color: var(--brand-red);
+        }
+
+        /* 3. FEED KARTU ARTIKEL KARYA PENULIS */
+        .article-card {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid #f0f0f0;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .article-thumb {
+            width: 90px;
+            height: 90px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .article-info h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+
+        .article-meta-row {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .badge-cat {
+            color: var(--brand-red);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="profile-header">
+            <div class="profile-avatar-wrap">
+                <img 
+                    src="https://raw.githubusercontent.com/satriahubdeals-eng/Project-Website-/refs/heads/main/img/IMG20260823195137.jpg?auto=format&fit=crop&w=240&h=240&q=80" 
+                    alt="Foto Profil Satria" 
+                    class="profile-avatar"
+                >
+                <div class="verified-badge" title="Terverifikasi">✓</div>
+            </div>
+
+            <h1 class="author-name">Satria Mahadmadani Rafan</h1>
+            <div class="author-tagline">Research & Technology</div>
+
+            <p class="author-bio">
+                Research & Technology enthusiast. Berbagi perspektif tentang inovasi modern dan catatan sejarah yang terlupakan.
+            </p>
+
+            <!-- Ringkasan Statistik -->
+            <div class="author-stats">
+                <div class="stat-item">
+                    <div class="stat-number">48</div>
+                    <div class="stat-label">Artikel</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12.4K</div>
+                    <div class="stat-label">Pembaca</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2019</div>
+                    <div class="stat-label">Bergabung</div>
+                </div>
+            </div>
+
+            <!-- Tombol Interaksi -->
+            <div class="profile-actions">
+                <button class="btn-follow" onclick="this.textContent = (this.textContent === 'Ikuti' ? 'Mengikuti' : 'Ikuti')">Ikuti</button>
+                <button class="btn-contact" onclick="alert('Kirim email ke satriahubdeals@gmail.com')">Kontak</button>
+            </div>
+        </header>
+
+        <!-- TAB NAVIGASI -->
+        <div class="tabs"
+            <span class="tab-item active">Diterbitkan (1)</span>
+            <span class="tab-item">Informasi pengalaman</span>
+            <a href="biodata.html" class="tab-item">Biodata Lengkap</a>
+
+        </div>
+        <!-- FEED TULISAN PENULIS -->
+        <section class="articles-list">
+            <!-- Artikel 1 -->
+            <a href="Nm" class="article-card">
+                <img src="https://cdn.filn.pp.ua/uploads/betabotzapi/e35d6.jpg" alt="Artikel Jogja" class="article-thumb">
+                <div class="article-info">
+                    <div class="article-meta-row">
+                        <span class="badge-cat">SEJARAH</span>
+                        <span>•</span>
+                        <time>11 September 2026</time>
+                    </div>
+                    <h3>Jejak Perjanjian Giyanti dan Lahirnya Kota Yogyakarta</h3>
+                </div>
+            </a>
+          
+            <!-- Artikel 2 -->
+            <a href="#" class="article-card">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=200&h=200&q=80" alt="Artikel Waterloo" class="article-thumb">
+                <div class="article-info">
+                    <div class="article-meta-row">
+                        <span class="badge-cat">KULTUR</span>
+                        <span>•</span>
+                        <time>10 Sep 2020</time>
+                    </div>
+                    <h3>Wisata Sejarah dan Berburu Benda Antik di Waterloo</h3>
+                </div>
+            </a>
+        </section>
+    </div>
+
+</body>
+</html>
