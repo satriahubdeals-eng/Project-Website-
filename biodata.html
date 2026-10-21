@@ -1,26 +1,85 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Biodata Satria Mahadmadani Rafan.">
-    <title>Info Biodata | Satria</title>
-  </head>
-  <body style="background-color: pink">
+    <title>Info biodata</title>
+    <style>
+      .a-navbar {
+        color: hwb(264 11% 25%);
+        text-decoration: none;
+        background-color:aqua;
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 15px;
+      }
+      .img-navbar {
+        max-width: 220px;
+        height: auto;
+        background-color: white; 
+        padding: 12px 12px 35px 12px; /* Jarak bawah sengaja dilebihkan seperti polaroid */
+        border-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transform: rotate(-2deg); /*efek sedikit miring*/
+        display: block;
+        margin: 10px auto 25px;
+        transition: transform 0.3s ease;
+}
+      .sosial-box {
+        display: flex;
+        gap:10px;
+        padding:25px;
+        background: black;
+        border: 1px solid black;
+        border-radius: 22px;
+        box-shadow:
+         0 25px 60px rgba(0,0,0,.5);
+      }
+      .sosial {
+        position: relative;
+        width: 65px;
+        height: 65px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 18px;
+        background: black;
+        color:#94a3b8;
+        font-size: 25px;
+        text-decoration:none;
+        border:1px solid #273449;
+        overflow: hidden;
+        transition: .4s cubic-bezier(.2,.8,.2,.1);
+      }
+      .sosial-befor {
+        content: " ";
+        position: none;
+        }
+
+      </style>
+    <body style="background-image: url(556870.jpg)" class="img-navbar">
       <marquee><center><h1>Bio data Satria</h1></center></marquee>
-      <center><img src="img/IMG20260823195137.jpg" alt="Foto Satria" width="150" height="200"></center>
+      <center><img src="Foto-profile.jpg" alt="foto Satria" width="150" height="200"> </center>
       <h2>Informasi Satria</h2>
       <ul>
-        <li><strong>Nama:</strong> Satria Mahadmadani Rafan S.Kom S.T.t</li>
-        <li><strong>Tempat, tanggal lahir:</strong> Surabaya, 26 February 2010</li>
-        <li><strong>Sekolah asal:</strong> SMP 17 AGUSTUS 1945</li>
-        <li><strong>Kelas:</strong> X-TKJ</li>
-        <li><strong>Cita-cita:</strong> Astronot &amp; Dokter</li>
-        <li><strong>Keahlian:</strong> Research &amp; Engineering</li>
+        <li><strong>Nama :</strong>Satria Mahadmadani Rafan S.Kom S.T.t</li>
+        <li><strong>tempat,tanggal lahir:</strong>Surabaya, 26 february 2010</li>
+        <li><strong>Sekolah asal :</strong>SMP 17 AGUSTUS 1945</li>
+        <li><strong>Kelas :</strong>X-TKJ</li>
+        <li><strong>Cita-Cita : Astronot & Dokter</strong></li>
+        <li><strong>Keahlian : Research & Enginering</strong></li>
       </ul>
-      <nav aria-label="Navigasi halaman">
-        <a href="index.html">Beranda</a> |
-        <a href="profile.html">Profil</a> |
-        <a href="Sejarah.html">Sejarah</a>
-      </nav>
-  </body>
+      <h2>informasi sosmed</h2>
+      <ul>
+        <li><strong>Instagram :</strong><a href="https://www.instagram.com/tkjunitominfo?stkn=MTludW5hbXNkbDJldA==" target="_blank">@itsneosatria</a></li>
+        <li><strong>tiktok :</strong><a href="https://www.tiktok.com/@itsneosatria?_r=1&_t=ZS-9A1DSyQQA4M" target="_blank>">@itsneosatria</a></li>
+        <li><strong>Contact me:</strong><a href="mailto:satriahubdeals@gmail.com" title="kirimn pesan kepada Satria">email satria</a></li>
+        <li><strong>Download in here :</strong><a href="Afgan - Bukan Cinta Biasa (SPOTISAVER).mp3">lagu afgan</a></li>
+      </ul>
+      <audio hidden autoplay loop>
+        <source src="Afgan - Bukan Cinta Biasa (SPOTISAVER).mp3" type="audio/mpeg">
+        Browsermu tidak mendukung tag audio
+      </audio>
+      <center><a href="Nm">
+        <button type="button" class="a-navbar">sejarah &raquo</button>
+      </a>
+      </center>
+    </body>
